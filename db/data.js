@@ -74,10 +74,10 @@ const dataOutput = async () => {
     // // console.log( JSON.stringify(fourthUser,null,2))
 
     firstUser.addShow(3)
-    firstUser.addShow(2)
+    firstUser.addShow(4)
     secondUser.addShow(1)
     // thirdUser.addShow(2)
-    fourthUser.addShow(4)
+    fourthUser.addShow(2)
 }
 
 module.exports={dataOutput}
