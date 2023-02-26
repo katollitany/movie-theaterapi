@@ -36,30 +36,75 @@ const dataOutput = async () => {
     ]);
 
     await Shows.bulkCreate([
+        
         {
-            title: "Office",
-            genre: "Comedy",
-            rating: 5,
-            status: "Watched"
+        "title": "King of Queens",
+        "genre": "Drama",
+        "rating": 5,
+        "status": "on-going"
         },
         {
-            title: "Queen's Gambit",
-            genre: "Strategy",
-            rating: 6,
-            status: "On going"  
+        "title": "X-Files",
+        "genre": "Sitcom",
+        "rating": 0,
+        "status": "on-going"
         },
         {
-            title: "NCIS",
-            genre: "Crime",
-            rating: 5,
-            status: "Unseen"
+        "title": "The Office",
+        "genre": "Comedy",
+        "rating": 1,
+        "status": "on-going"
         },
         {
-            title: "Abbott Elemetary",
-            genre: "Comedy",
-            rating: 10,
-            status: "Watched"
+        "title": "American Horror Story",
+        "genre": "Sitcom",
+        "rating": 5,
+        "status": "on-going"
+        },
+        {
+        "title": "House",
+        "genre": "Comedy",
+        "rating": 0,
+        "status": "on-going"
+        },
+        {
+        "title": "The Punisher",
+        "genre": "Drama",
+        "rating": 5,
+        "status": "on-going"
+        },
+        {
+        "title": "Squid Games",
+        "genre": "Comedy",
+        "rating": 0,
+        "status": "on-going"
+        },
+        {
+        "title": "Avatar",
+        "genre": "Comedy",
+        "rating": 1,
+        "status": "on-going"
+        },
+        {
+        "title": "Demon Slayer",
+        "genre": "Sitcom",
+        "rating": 5,
+        "status": "cancelled"
+        },
+        {
+        "title": "Jujutsu Kaisen",
+        "genre": "Horror",
+        "rating": 0,
+        "status": "cancelled"
+        },
+        {
+        "title": "Queens Gambit",
+        "genre": "Drama",
+        "rating": 0,
+        "status": "cancelled"
         }
+    
+          
     ])
 
 
@@ -68,6 +113,7 @@ const dataOutput = async () => {
     const thirdUser = await User.findByPk(3)
     const fourthUser = await User.findByPk(4)
 
+
     // // console.log( JSON.stringify(firstUser,null,2))
     // // console.log( JSON.stringify(secondUser,null,2))
     // // console.log( JSON.stringify(thirdUser,null,2))
@@ -75,9 +121,16 @@ const dataOutput = async () => {
 
     firstUser.addShow(3)
     firstUser.addShow(4)
+    firstUser.addShow(8)
     secondUser.addShow(1)
-    // thirdUser.addShow(2)
+    secondUser.addShow(6)
+    secondUser.addShow(9)
+    thirdUser.addShow(5)
+    thirdUser.addShow(7)
+    thirdUser.addShow(10)
     fourthUser.addShow(2)
+    fourthUser.addShow(11)
+    fourthUser.addShow(8)
 }
 
 module.exports={dataOutput}

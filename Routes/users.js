@@ -56,7 +56,7 @@ userRoutes.put("/:id/shows/:showId", async (req,res)=>{
     const watchedShow = await Shows.findOne({where:{ 
         id:showId,
         UserId:id,
-        status: "Watched"
+        status: "on-going"
     }})
 
     if (watchedShow){
